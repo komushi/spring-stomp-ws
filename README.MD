@@ -25,8 +25,15 @@ ws://localhost:8080/endpoint
 ----------
 Run the WebSocket Server
 -------------
-###build & run on console
-target/StompWebSocket-0.0.1-SNAPSHOT.jar
+###download & build & run with java cli
+
+```
+git clone https://github.com/komushi/spring-stomp-sockjs.git
+cd spring-stomp-sockjs
+mvn clean pacakge
+java -jar target/StompSockJS-0.0.1-SNAPSHOT.jar
+```
+
 
 ###run it from any IDE
 
