@@ -14,13 +14,13 @@ ws://localhost:8080/endpoint
 /topic/textgreetings
 
 ###Controller's annotation method to receive text message
-/app/textgreet
+/topic/textgreet
 
 ###Queue for json messages
 /topic/jsongreetings
 
 ###Controller's annotation method to receive json message
-/app/jsongreet
+/topic/jsongreet
 
 ----------
 Run the WebSocket Server

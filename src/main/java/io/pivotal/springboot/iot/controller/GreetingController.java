@@ -5,6 +5,7 @@ package io.pivotal.springboot.iot.controller;
  */
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
 import io.pivotal.springboot.iot.domain.*;
 
@@ -12,6 +13,7 @@ import io.pivotal.springboot.iot.domain.*;
 public class GreetingController {
 
 
+    @CrossOrigin
     @MessageMapping("/textgreet")
     @SendTo("/topic/textgreetings")
     public String textgreeting(String name) throws Exception {
@@ -19,6 +21,7 @@ public class GreetingController {
         return "Hello " + name;
     }
 
+    @CrossOrigin
     @MessageMapping("/jsongreet")
     @SendTo("/topic/jsongreetings")
     public OutboundGreeting jsongreeting(InboundHello message) throws Exception {
